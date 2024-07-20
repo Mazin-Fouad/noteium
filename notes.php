@@ -4,10 +4,10 @@
    include './sharedComponents/meta.php'; 
 ?>
 <body>
-
+    
 <?php
     include './sharedComponents/navbar.php';
-    include 'hero.php';
+    echo "Note will be showed here";
     include './sharedComponents/footer.php';
 ?>
 
