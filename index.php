@@ -8,21 +8,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css.map">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./dist/css/style.css">
     <title>Noteium</title>
 </head>
 <body>
    
 <?php
-include 'navbar.php'
+    include 'navbar.php'
 ?>
 
 
 
     <!-- Bootstrap JS -->
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
