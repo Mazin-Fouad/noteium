@@ -8,7 +8,7 @@
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="index.php">Home</a>
         <a class="nav-link" href="notes.php">My Notes</a>
-        <a class="nav-link" href="#">Add Notes</a>
+        <a class="nav-link" href="insert.php">Add Notes</a>
       </div>
     </div>
   </div>

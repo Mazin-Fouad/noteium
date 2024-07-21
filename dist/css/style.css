@@ -1,3 +1,37 @@
 body {
   font-family: 'Roboto', sans-serif !important;
 }
+
+/* Start style hr line in the hero section */
+.hr-style {
+  overflow: visible;
+  height: 30px;
+  border-style: solid;
+  border-color: #0000;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+
+.hr-style::before {
+  display: block;
+  content: '';
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #0000;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+.form-check-input:checked#urgent {
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+.form-check-input:checked#medium {
+  background-color: #ffa500;
+  border-color: #ffa500;
+}
+.form-check-input:checked#low {
+  background-color: #008000;
+  border-color: #008000;
+}
