@@ -22,7 +22,9 @@ body {
   border-width: 0 0 1px 0;
   border-radius: 20px;
 }
+/* End style hr line in the hero section */
 
+/* Start style the radios in the form */
 .form-check-input:checked#urgent {
   background-color: #ff0000;
   border-color: #ff0000;
@@ -35,3 +37,4 @@ body {
   background-color: #008000;
   border-color: #008000;
 }
+/* End style the radios in the form */
