@@ -1,3 +1,3 @@
-<footer class="text-center">
-   <h3> Developed with ♥️</h3>
+<footer class="text-center bg-dark-subtle align-content-center" style="min-height: 50px;">
+   <h4> Developed with ♥️</h4>
 </footer>

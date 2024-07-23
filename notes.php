@@ -7,7 +7,7 @@
     
 <?php
     include './sharedComponents/navbar.php';
-    echo "Note will be showed here";
+    include 'process_notes.php';
     include './sharedComponents/footer.php';
 ?>
 
