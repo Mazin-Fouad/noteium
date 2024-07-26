@@ -16,6 +16,16 @@ if (isset($_POST["noteTitle"]) && isset($_POST["priority"]) && isset($_POST["des
     file_put_contents('notes.txt', json_encode($notes, JSON_PRETTY_PRINT));
 }
 
+if (isset($_POST["deleteIndex"])) {
+    $deleteIndex = $_POST["deleteIndex"];
+    if (isset($notes[$deleteIndex])) {
+        unset($notes[$deleteIndex]);
+        $notes = array_values($notes); // Reindex array
+        file_put_contents('notes.txt', json_encode($notes, JSON_PRETTY_PRINT));
+        echo 'Note Deleted';
+    }
+}
+
 echo '
     <div class="container pt-5" style="min-height: calc(100dvh - 106px);">
         <h2 class="text-center mb-5">Your Notes</h2>
@@ -32,8 +42,11 @@ foreach ($notes as $key => $note) {
                     <h4 class="card-title ">' . $noteTitle . '</h4>
                     <h6 class="card-subtitle mb-3">Priority: ' . strtoupper($notePriority) . '</h6>
                     <p class="card-text">' . $noteDescription . '</p>
-                    <a href="#" class="btn btn-danger mt-auto align-self-end">Delete</a>
-                </div>
+                    <form method="POST" action="" class="mt-auto align-self-end">
+                        <input type="hidden" name="deleteIndex" value="' . $key . '">
+                        <button type="submit" class="btn"><i class="fa-solid fs-4 fa-trash" style="color: #ff3c41;"></i></button>
+                    </form>
+                    </div>
             </div>
         </div>';
 }

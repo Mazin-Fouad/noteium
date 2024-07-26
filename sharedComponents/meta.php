@@ -10,5 +10,7 @@
     <link rel="stylesheet" href="./dist/css/bootstrap.min.css.map">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./dist/css/style.css">
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="./dist/css/all.min.css">
     <title>Noteium</title>
 </head>

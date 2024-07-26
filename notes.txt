@@ -1,20 +1,5 @@
 [
     {
-        "noteTitle": "PHP",
-        "notePriority": "urgent",
-        "NoteDescription": "I start programming with php"
-    },
-    {
-        "noteTitle": "dfff",
-        "notePriority": "urgent",
-        "NoteDescription": "dddd"
-    },
-    {
-        "noteTitle": "New note",
-        "notePriority": "medium",
-        "NoteDescription": "Test the new php file"
-    },
-    {
         "noteTitle": "test",
         "notePriority": "urgent",
         "NoteDescription": "test"
