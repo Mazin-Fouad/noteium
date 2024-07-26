@@ -1,7 +1,7 @@
 [
     {
         "noteTitle": "PHP",
-        "notPriority": "urgent",
+        "notePriority": "urgent",
         "NoteDescription": "I start programming with php"
     },
     {
@@ -13,5 +13,15 @@
         "noteTitle": "New note",
         "notePriority": "medium",
         "NoteDescription": "Test the new php file"
+    },
+    {
+        "noteTitle": "test",
+        "notePriority": "urgent",
+        "NoteDescription": "test"
+    },
+    {
+        "noteTitle": "Bootstrap",
+        "notePriority": "urgent",
+        "NoteDescription": "Read docs"
     }
 ]
