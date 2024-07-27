@@ -1,6 +1,6 @@
 <?php
 echo '
-<div class="w-25 h-75 mx-auto align-content-center" style="min-height: 75dvh;">
+<div class="w-25 h-75 mx-auto align-content-center" style="min-height: calc(100dvh - 156px);">
     <form action="notes.php" method="post" class="container">
         <div class="input-group flex-nowrap">
             <input type="text" class="form-control" placeholder="Note Title" name="noteTitle">

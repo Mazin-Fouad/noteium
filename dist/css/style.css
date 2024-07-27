@@ -38,3 +38,12 @@ body {
   border-color: #008000;
 }
 /* End style the radios in the form */
+
+/* Add hover and active styles for a tags in the navbar */
+.navbar-nav .nav-link:hover {
+  color: #ffcc00 !important; /* Change to your desired hover color */
+}
+
+.navbar-nav .nav-link.active {
+  color: #ff6600 !important; /* Change to your desired active color */
+}
