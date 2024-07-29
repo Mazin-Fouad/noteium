@@ -58,7 +58,7 @@ echo '
                     <input type="hidden" name="editIndex" value="' . $key . '">
                     <div class="mb-3">
                         <label for="noteTitle' . $key . '" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="noteTitle' . $key . '" name="noteTitle" value="' . htmlspecialchars($noteTitle) . '">
+                        <input type="text" class="form-control" id="noteTitle' . $key . '" name="noteTitle" value="' . $noteTitle . '">
                     </div>
                     <div class="mb-3">
                         <label for="notePriority' . $key . '" class="form-label">Priority</label>
@@ -70,7 +70,7 @@ echo '
                     </div>
                     <div class="mb-3">
                         <label for="noteDescription' . $key . '" class="form-label">Description</label>
-                        <textarea class="form-control" id="noteDescription' . $key . '" name="noteDescription" rows="3">' . htmlspecialchars($noteDescription) . '</textarea>
+                        <textarea class="form-control" id="noteDescription' . $key . '" name="noteDescription" rows="3">' . $noteDescription . '</textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Save changes</button>
                 </form>

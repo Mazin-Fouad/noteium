@@ -6,7 +6,7 @@
     },
     {
         "noteTitle": "Review GitHub docs",
-        "notePriority": "urgent",
+        "notePriority": "medium",
         "NoteDescription": "Starting from next week...."
     },
     {
