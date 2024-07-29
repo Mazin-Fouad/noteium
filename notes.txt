@@ -1,10 +1,5 @@
 [
     {
-        "noteTitle": "Bootstrap",
-        "notePriority": "urgent",
-        "NoteDescription": "Read docs"
-    },
-    {
         "noteTitle": "PHP first project",
         "notePriority": "urgent",
         "NoteDescription": "it should be done in the next week! "
@@ -13,5 +8,10 @@
         "noteTitle": "Gitlab",
         "notePriority": "medium",
         "NoteDescription": "I want to read Gitlab docs"
+    },
+    {
+        "noteTitle": "Review GitHub docs",
+        "notePriority": "low",
+        "NoteDescription": "Starting from next week.."
     }
 ]
