@@ -6,8 +6,8 @@
     },
     {
         "noteTitle": "Review GitHub docs",
-        "notePriority": "low",
-        "NoteDescription": "Starting from next week.."
+        "notePriority": "urgent",
+        "NoteDescription": "Starting from next week...."
     },
     {
         "noteTitle": "PHP ",
