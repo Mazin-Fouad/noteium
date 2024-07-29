@@ -8,11 +8,21 @@ if (strtolower($notePriority) === 'urgent') {
 } elseif (strtolower($notePriority) === 'low') {
     $bgClass = 'bg-success';
 }
+
+$borderColor = '';#
+if (strtolower($notePriority) === 'urgent') {
+    $borderColor = 'border-danger';
+} elseif (strtolower($notePriority) === 'medium') {
+    $borderColor = 'border-warning';
+} elseif (strtolower($notePriority) === 'low') {
+    $borderColor = 'border-success';
+}
+
  
 echo '
 <div class="col-12 col-md-6 col-lg-4 mb-2">
     <div class="card h-100">
-        <div class="card-body d-flex flex-column">
+        <div class="card-body d-flex flex-column  border-start border-4 '.$borderColor.'">
             <h4 class="card-title">' . $noteTitle . '</h4>
             <h6 class="card-subtitle rounded-4 mb-3 '. $bgClass . ' text-white p-1 mx-auto" style="width: 38%">Priority: ' . strtoupper($notePriority) . '</h6>
             <p class="card-text text-start">' . $noteDescription . '</p>

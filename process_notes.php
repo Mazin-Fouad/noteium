@@ -39,9 +39,9 @@ if (isset($_POST['search'])) {
 echo '
     <div class="container pt-5" style="min-height: calc(100dvh - 156px);">
         <h2 class="text-center mb-5 display-5 fw-bolder">Saved Notes</h2>
-         <form method="POST" class="w-25 d-flex mb-3">
+         <form method="POST" class="w-75 d-flex mb-3">
             <input type="text" name="search" class="form-control me-2" placeholder="Search notes..." value="' . htmlspecialchars($searchQuery) . '">
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button type="submit" class="btn"><i class="fa-solid fs-3 fw-bolder fa-magnifying-glass"></i></button>
         </form>
 
         <div class="row text-center">';
