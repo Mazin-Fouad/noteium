@@ -28,7 +28,7 @@ echo '
             <p class="card-text text-start">' . $noteDescription . '</p>
             <form method="POST" action="" class="mt-auto align-self-end">
                 <input type="hidden" name="deleteIndex" value="' . $key . '">
-                <button type="submit" class="btn"><i class="fa-solid fs-5 fa-trash" style="color: #ff3c41;"  title="Delete this note"></i></button>
+                <button type="submit" class="btn"><i class="fa-solid fs-5 fa-trash" style="color: #ff3c41;" title="Delete this note"></i></button>
             </form>
         </div>
     </div>
