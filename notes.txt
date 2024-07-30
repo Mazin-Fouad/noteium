@@ -2,11 +2,11 @@
     {
         "noteTitle": "Gitlab",
         "notePriority": "medium",
-        "NoteDescription": "I want to read Gitlab docs"
+        "NoteDescription": "Next Friday i will read Gitlab docs"
     },
     {
         "noteTitle": "Review GitHub docs",
-        "notePriority": "medium",
+        "notePriority": "low",
         "NoteDescription": "Starting from next week...."
     },
     {
