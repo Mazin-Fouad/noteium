@@ -1,22 +1,14 @@
 [
     {
-        "noteTitle": "Gitlab",
+        "noteTitle": "PHP",
+        "notePriority": "urgent",
+        "NoteDescription": "Implement the first php project",
+        "createdAt": "2024-08-01 16:43"
+    },
+    {
+        "noteTitle": "test",
         "notePriority": "medium",
-        "NoteDescription": "Next Friday i will read Gitlab docs"
-    },
-    {
-        "noteTitle": "Review GitHub docs",
-        "notePriority": "low",
-        "NoteDescription": "Starting from next week...."
-    },
-    {
-        "noteTitle": "PHP ",
-        "notePriority": "urgent",
-        "NoteDescription": "Implement first PHP Web-App"
-    },
-    {
-        "noteTitle": "Unit Testing",
-        "notePriority": "urgent",
-        "NoteDescription": "This is test"
+        "NoteDescription": "tesr",
+        "createdAt": "01-08-2024 16:49"
     }
 ]

@@ -9,7 +9,8 @@ if (isset($_POST["noteTitle"]) && isset($_POST["priority"]) && isset($_POST["des
     $newNote = [
         'noteTitle' => $_POST['noteTitle'],
         'notePriority' => $_POST['priority'],
-        'NoteDescription' => $_POST['description'],
+        'NoteDescription' => $_POST['description'],        
+        'createdAt' => date('d-m-Y H:i') 
     ];
     //echo 'New Note Created';
     array_push($notes, $newNote);
@@ -57,6 +58,7 @@ foreach ($notes as $key => $note) {
     $noteTitle = isset($note['noteTitle']) ? $note['noteTitle'] : 'No title';
     $notePriority = isset($note['notePriority']) ? $note['notePriority'] : 'No priority';
     $noteDescription = isset($note['NoteDescription']) ? $note['NoteDescription'] : 'No description';
+    $createdAt = isset($note['createdAt']) ? $note['createdAt'] : 'No date';
     include 'noteCard.php';
 }
 echo '

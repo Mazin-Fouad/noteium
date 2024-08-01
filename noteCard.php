@@ -40,7 +40,10 @@ echo '
              </div>
           
             </form>
-          
+            <div class="fs-6 text-start"> 
+            <i class="fa-solid fa-clock" style="color: #ffd43b;" title="Note created"></i>
+            <span class="ms-1">'.$createdAt.'</span>
+            </div>
         </div>
     </div>
 </div>
