@@ -46,7 +46,7 @@ if (isset($_POST['search'])) {
 }
 
 echo '
-    <div class="container pt-5" style="min-height: calc(100dvh - 156px);">
+    <div class="container pt-5" style="min-height: calc(100dvh - 136px);">
         <h2 class="text-center mb-5 display-5 fw-bolder tracking-wide" style="letter-spacing:.4rem;">Saved Notes</h2>
          <form method="POST" class=" w-50 d-flex mb-3">
             <input type="text" name="search" class="form-control me-2" placeholder="Search notes..." value="' . $searchQuery . '">
