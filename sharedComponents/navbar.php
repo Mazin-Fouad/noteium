@@ -1,6 +1,4 @@
-<?php
-$current_page = basename($_SERVER['PHP_SELF']);
-?>
+
 
 <style>
   .navbar-nav .nav-link:hover {
@@ -10,7 +8,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
   .navbar-nav .nav-link.active {
     color: #ff6600 !important;
-    /* Change to your desired active color */
     font-weight: bold;
   }
 </style>
@@ -18,7 +15,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="index.php"><img src="./assets/logo_transparent.png" alt="Logo" style="width: 200px; height: 80px;"></a>
+    <a class="navbar-brand" href="index.php"><img src="./assets/logo_transparent.png" alt="Logo" style="width: 150px; height: 60px;"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

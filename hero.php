@@ -27,7 +27,7 @@ section .container {
 
 
 <section class='p-5 rounded-lg text-white'>
-  <div class="container align-content-center" style="min-height: calc(100dvh - 252px);">
+  <div class="container align-content-center" style="min-height: calc(100dvh - 232px);">
     <h1 class='display-4'>Welcome to Your Notes Hub!</h1>
     <p class='lead'>Discover the easiest way to organize, manage, and access your notes <br> with our streamlined platform.</p>
     <a class='btn btn-dark' href='notes.php' role='button'>Get Started</a>
