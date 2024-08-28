@@ -2,7 +2,7 @@
 
 echo '
 <div class="container">
-    <div class="row justify-content-center align-items-center" style="min-height: calc(100vh - 156px);">
+    <div class="row justify-content-center align-items-center" style="min-height: calc(100vh - 136px);">
         <div class="col-12 col-sm-10 col-md-8 col-lg-6">
             <form action="notes.php" method="post">
                 <div class="input-group flex-nowrap mb-3">
