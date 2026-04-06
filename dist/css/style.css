@@ -38,3 +38,31 @@ body {
   border-color: #008000;
 }
 /* End style the radios in the form */
+
+/* Statistics cards */
+.stats-card {
+  border-radius: 12px;
+  padding: 14px 10px;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+.stats-card .stats-number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.stats-card .stats-label {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .08rem;
+  opacity: .9;
+}
+.stats-total  { background: #343a40; }
+.stats-urgent { background: #dc3545; }
+.stats-medium { background: #fd7e14; }
+.stats-low    { background: #28a745; }
+
+/* Pinned note card */
+.pinned-card {
+  box-shadow: 0 0 0 2px #6c757d, 0 4px 12px rgba(0,0,0,.15);
+}

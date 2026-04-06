@@ -30,15 +30,29 @@ echo '
                     </div>
                 </div>
 
-                <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Leave a comment here" name="description" style="height: 200px; resize:none;" required></textarea>
-                    <label for="floatingTextarea2">Description</label>
+                <div class="form-floating mb-1">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="descriptionTextarea" name="description" style="height: 200px; resize:none;" maxlength="500" required></textarea>
+                    <label for="descriptionTextarea">Description</label>
                 </div>
-                    <div class="d-flex justify-content-center">
+                <div class="text-end text-muted small mb-3">
+                    <span id="charCount">0</span> / 500
+                </div>
+
+                <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-dark">Add Note</button>
                 </div>
             </form>
         </div>
     </div>
-</div>';
+</div>
+
+<script>
+    const textarea = document.getElementById("descriptionTextarea");
+    const charCount = document.getElementById("charCount");
+    textarea.addEventListener("input", function () {
+        const len = textarea.value.length;
+        charCount.textContent = len;
+        charCount.style.color = len >= 450 ? "#dc3545" : len >= 350 ? "#fd7e14" : "";
+    });
+</script>';
 
