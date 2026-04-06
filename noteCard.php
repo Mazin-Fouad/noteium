@@ -21,8 +21,7 @@ if (strtolower($notePriority) === 'urgent') {
 $pinnedBadge = $isPinned
     ? '<span class="badge bg-secondary mb-2"><i class="fa-solid fa-thumbtack me-1"></i>Pinned</span>'
     : '';
-$pinIcon  = $isPinned ? 'fa-thumbtack'      : 'fa-thumbtack';
-$pinColor = $isPinned ? '#6c757d'            : '#adb5bd';
+$pinColor = $isPinned ? '#6c757d' : '#adb5bd';
 $pinTitle = $isPinned ? 'Unpin this note'    : 'Pin this note';
 
 echo '

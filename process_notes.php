@@ -37,7 +37,7 @@ if (isset($_POST['editIndex'])) {
 if (isset($_POST['pinIndex'])) {
     $pinIndex = (int)$_POST['pinIndex'];
     if (isset($notes[$pinIndex])) {
-        $notes[$pinIndex]['pinned'] = empty($notes[$pinIndex]['pinned']);
+        $notes[$pinIndex]['pinned'] = !(isset($notes[$pinIndex]['pinned']) && $notes[$pinIndex]['pinned'] === true);
         file_put_contents('notes.txt', json_encode($notes, JSON_PRETTY_PRINT));
     }
 }
@@ -76,10 +76,12 @@ function parseNoteDate($dateStr) {
     return new DateTime('1970-01-01');
 }
 
+$priorityOrder = ['urgent' => 0, 'medium' => 1, 'low' => 2];
+
 $keys = array_keys($notes);
-usort($keys, function($a, $b) use ($notes, $sortBy) {
-    $pinnedA = !empty($notes[$a]['pinned']);
-    $pinnedB = !empty($notes[$b]['pinned']);
+usort($keys, function($a, $b) use ($notes, $sortBy, $priorityOrder) {
+    $pinnedA = isset($notes[$a]['pinned']) && $notes[$a]['pinned'] === true;
+    $pinnedB = isset($notes[$b]['pinned']) && $notes[$b]['pinned'] === true;
     if ($pinnedA !== $pinnedB) {
         return $pinnedA ? -1 : 1;
     }
@@ -88,9 +90,8 @@ usort($keys, function($a, $b) use ($notes, $sortBy) {
         $dateB = parseNoteDate($notes[$b]['createdAt'] ?? '');
         return $dateA <=> $dateB;
     } elseif ($sortBy === 'priority') {
-        $order = ['urgent' => 0, 'medium' => 1, 'low' => 2];
-        $prioA = $order[strtolower($notes[$a]['notePriority'] ?? '')] ?? 3;
-        $prioB = $order[strtolower($notes[$b]['notePriority'] ?? '')] ?? 3;
+        $prioA = $priorityOrder[strtolower($notes[$a]['notePriority'] ?? '')] ?? 3;
+        $prioB = $priorityOrder[strtolower($notes[$b]['notePriority'] ?? '')] ?? 3;
         return $prioA <=> $prioB;
     } elseif ($sortBy === 'alphabetical') {
         return strcmp($notes[$a]['noteTitle'] ?? '', $notes[$b]['noteTitle'] ?? '');
@@ -166,7 +167,7 @@ foreach ($keys as $key) {
     $notePriority = isset($note['notePriority']) ? $note['notePriority'] : 'No priority';
     $noteDescription = isset($note['NoteDescription']) ? $note['NoteDescription'] : 'No description';
     $createdAt = isset($note['createdAt']) ? $note['createdAt'] : 'No date';
-    $isPinned = !empty($note['pinned']);
+    $isPinned = isset($note['pinned']) && $note['pinned'] === true;
     include 'noteCard.php';
 }
 echo '
