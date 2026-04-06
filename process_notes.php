@@ -124,25 +124,25 @@ echo '
         <div class="row g-2 mb-4 text-center">
             <div class="col-6 col-sm-3">
                 <div class="stats-card stats-total">
-                    <div class="stats-number">' . $stats['total'] . '</div>
+                    <div class="stats-number">' . (int)$stats['total'] . '</div>
                     <div class="stats-label">Total</div>
                 </div>
             </div>
             <div class="col-6 col-sm-3">
                 <div class="stats-card stats-urgent">
-                    <div class="stats-number">' . $stats['urgent'] . '</div>
+                    <div class="stats-number">' . (int)$stats['urgent'] . '</div>
                     <div class="stats-label">Urgent</div>
                 </div>
             </div>
             <div class="col-6 col-sm-3">
                 <div class="stats-card stats-medium">
-                    <div class="stats-number">' . $stats['medium'] . '</div>
+                    <div class="stats-number">' . (int)$stats['medium'] . '</div>
                     <div class="stats-label">Medium</div>
                 </div>
             </div>
             <div class="col-6 col-sm-3">
                 <div class="stats-card stats-low">
-                    <div class="stats-number">' . $stats['low'] . '</div>
+                    <div class="stats-number">' . (int)$stats['low'] . '</div>
                     <div class="stats-label">Low</div>
                 </div>
             </div>
