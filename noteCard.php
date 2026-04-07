@@ -9,7 +9,7 @@ if (strtolower($notePriority) === 'urgent') {
     $bgClass = 'bg-success';
 }
 
-$borderColor = '';#
+$borderColor = '';
 if (strtolower($notePriority) === 'urgent') {
     $borderColor = 'border-danger';
 } elseif (strtolower($notePriority) === 'medium') {
@@ -18,31 +18,52 @@ if (strtolower($notePriority) === 'urgent') {
     $borderColor = 'border-success';
 }
 
- 
+$pinnedBadge = $isPinned
+    ? '<span class="badge bg-secondary mb-2"><i class="fa-solid fa-thumbtack me-1"></i>Pinned</span>'
+    : '';
+$pinColor = $isPinned ? '#6c757d' : '#adb5bd';
+$pinTitle = $isPinned ? 'Unpin this note' : 'Pin this note';
+
 echo '
 <div class="col-12 col-md-6 col-lg-4 mb-2">
-    <div class="card h-100">
+    <div class="card h-100' . ($isPinned ? ' pinned-card' : '') . '">
         <div class="card-body d-flex flex-column border-start border-4 ' . $borderColor . '">
-            <h4 class="card-title">' . $noteTitle . '</h4>
-            <h6 class="card-subtitle rounded-4 mb-3 ' . $bgClass . ' text-white p-1 mx-auto" style="width: 38%">Priority: ' . strtoupper($notePriority) . '</h6>
-            <p class="card-text text-start">' . $noteDescription . '</p>
-            <form method="POST" action="" class="mt-auto align-self-end">
-                <input type="hidden" name="deleteIndex" value="' . $key . '">
-             <div class="d-flex justify-content-center">
-                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editModal' . $key . '" data-bs-placement="bottom" title="Edit this note">
-                <i class="fa-solid fs-5 fa-edit" style="color: #007bff;"></i>
-            </button>
+            ' . $pinnedBadge . '
+            <h4 class="card-title">' . htmlspecialchars($noteTitle) . '</h4>
+            <h6 class="card-subtitle rounded-4 mb-3 ' . $bgClass . ' text-white p-1 mx-auto" style="width: 38%">Priority: ' . htmlspecialchars(strtoupper($notePriority)) . '</h6>
+            <p class="card-text text-start">' . nl2br(htmlspecialchars($noteDescription)) . '</p>
 
-             <button type="submit" class="btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete this note">
-                    <i class="fa-solid fs-5 fa-trash" style="color: #ff3c41;"></i>
+            <div class="mt-auto d-flex justify-content-end gap-1">
+                <!-- Pin -->
+                <form method="POST" action="" class="d-inline">
+                    <input type="hidden" name="pinIndex" value="' . (int)$key . '">
+                    <button type="submit" class="btn btn-sm" title="' . $pinTitle . '">
+                        <i class="fa-solid fa-thumbtack' . ($isPinned ? '' : ' fa-rotate-90') . '" style="color:' . $pinColor . ';"></i>
+                    </button>
+                </form>
+                <!-- Edit -->
+                <button type="button" class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#editModal' . $key . '" title="Edit this note">
+                    <i class="fa-solid fa-edit" style="color:#007bff;"></i>
                 </button>
+                <!-- Duplicate -->
+                <form method="POST" action="" class="d-inline">
+                    <input type="hidden" name="duplicateIndex" value="' . (int)$key . '">
+                    <button type="submit" class="btn btn-sm" title="Duplicate this note">
+                        <i class="fa-solid fa-copy" style="color:#28a745;"></i>
+                    </button>
+                </form>
+                <!-- Delete -->
+                <form method="POST" action="" class="d-inline">
+                    <input type="hidden" name="deleteIndex" value="' . (int)$key . '">
+                    <button type="submit" class="btn btn-sm" title="Delete this note">
+                        <i class="fa-solid fa-trash" style="color:#ff3c41;"></i>
+                    </button>
+                </form>
+            </div>
 
-             </div>
-          
-            </form>
-            <div class="fs-6 text-start"> 
-            <i class="fa-solid fa-clock" style="color: #ffd43b;" title="Note created"></i>
-            <span class="ms-1">'.$createdAt.'</span>
+            <div class="fs-6 text-start mt-2">
+                <i class="fa-solid fa-clock" style="color:#ffd43b;" title="Note created"></i>
+                <span class="ms-1">' . htmlspecialchars($createdAt) . '</span>
             </div>
         </div>
     </div>
@@ -61,7 +82,7 @@ echo '
                     <input type="hidden" name="editIndex" value="' . $key . '">
                     <div class="mb-3">
                         <label for="noteTitle' . $key . '" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="noteTitle' . $key . '" name="noteTitle" value="' . $noteTitle . '">
+                        <input type="text" class="form-control" id="noteTitle' . $key . '" name="noteTitle" value="' . htmlspecialchars($noteTitle) . '">
                     </div>
                     <div class="mb-3">
                         <label for="notePriority' . $key . '" class="form-label">Priority</label>
@@ -73,7 +94,7 @@ echo '
                     </div>
                     <div class="mb-3">
                         <label for="noteDescription' . $key . '" class="form-label">Description</label>
-                        <textarea class="form-control" id="noteDescription' . $key . '" name="noteDescription" rows="3">' . $noteDescription . '</textarea>
+                        <textarea class="form-control" id="noteDescription' . $key . '" name="noteDescription" rows="3">' . htmlspecialchars($noteDescription) . '</textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Save changes</button>
                 </form>
